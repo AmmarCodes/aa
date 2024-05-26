@@ -1,35 +1,53 @@
 .theme-light {
+	--color-h: 32;
+	--color-s: 57%;
+	--color-l: 95%;
+
+	--text: hsl(248, 19%, 40%);
+
 	--highlight-mix-blend-mode: darken;
 	--mono-rgb-0: 255, 255, 255;
-	--mono-rgb-100: 0, 0, 0;
+	--mono-rgb-100: 87, 82, 121;
 	--color-red-rgb: 233, 49, 71;
-	--color-red: #e93147;
+	--color-red: #b4637a;
 	--color-orange-rgb: 236, 117, 0;
-	--color-orange: #ec7500;
+	--color-orange: #d7827e;
 	--color-yellow-rgb: 224, 172, 0;
-	--color-yellow: #e0ac00;
+	--color-yellow: #ea9d34;
 	--color-green-rgb: 8, 185, 78;
-	--color-green: #08b94e;
+	--color-green: #286983;
 	--color-cyan-rgb: 0, 191, 188;
-	--color-cyan: #00bfbc;
+	--color-cyan: #56949f;
 	--color-blue-rgb: 8, 109, 221;
-	--color-blue: #086ddd;
+	--color-blue: #8cc4dc;
 	--color-purple-rgb: 120, 82, 238;
-	--color-purple: #7852ee;
+	--color-purple: #907aa9;
 	--color-pink-rgb: 213, 57, 132;
-	--color-pink: #d53984;
-	--color-base-00: #ffffff;
-	--color-base-05: #fcfcfc;
-	--color-base-10: #fafafa;
-	--color-base-20: #f6f6f6;
-	--color-base-25: #e3e3e3;
-	--color-base-30: #e0e0e0;
-	--color-base-35: #d4d4d4;
-	--color-base-40: #bdbdbd;
-	--color-base-50: #ababab;
-	--color-base-60: #707070;
-	--color-base-70: #5c5c5c;
-	--color-base-100: #222222;
+	--color-pink: #cc8cdc;
+	/* background primary */
+	--color-base-00: hsl(var(--color-h), var(--color-s), var(--color-l));
+	/* background secondary alt */
+	--color-base-05: hsl(var(--color-h), var(--color-s), var(--color-l));
+	/* alt-background */
+	--color-base-10: hsl(var(--color-h), var(--color-s), var(--color-l));
+	/* files sidebar and inactive top bar*/
+	--color-base-20: hsl(25, 35%, 93%);
+	/* --color-base-25: hsl(32, 65%, 95%, 1); not in use apparantly */
+	/* elements borders */
+	--color-base-30: hsl(var(--color-h), var(--color-s), var(--color-l));
+	/* elements border hover - border between tabs */
+	--color-base-35: #f00; /*hsl(var(--color-h), var(--color-s), var(--color-l));*/
+	/* modal borders */
+	--color-base-40: hsl(315, 4%, 80%);
+	/* color text-faint (placeholders) */
+	--color-base-50: hsl(257, 9%, 61%);
+	/* --color-base-60: #707070;  not in use apparantly */
+	/* text-muted (folder names, icons, tab titles, modal labels) */
+	--color-base-70: hsl(248, 12%, 52%);
+
+	/* text-normal */
+	--color-base-100: var(--text);
+
 	--color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
 	--color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
 	--color-accent-1: hsl(
@@ -576,7 +594,8 @@ body {
 	--swatch-width: 24px;
 	--swatch-shadow: inset 0 0 0 1px rgba(var(--mono-rgb-100), 0.15);
 	/* Tabs */
-	--tab-background-active: var(--background-primary);
+	/* --tab-background-active: var(--background-primary); */
+	--tab-background-active: rgba(var(--mono-rgb-100), 0.075);
 	--tab-text-color: var(--text-faint);
 	--tab-text-color-active: var(--text-muted);
 	--tab-text-color-focused: var(--text-muted);
@@ -591,7 +610,7 @@ body {
 	--tab-outline-width: 1px;
 	--tab-curve: 6px;
 	--tab-radius: var(--radius-s);
-	--tab-radius-active: 6px 6px 0 0;
+	--tab-radius-active: var(--radius-s);
 	--tab-width: 200px;
 	--tab-max-width: 320px;
 	/* Stacked tabs */
@@ -732,61 +751,79 @@ body {
 	--interactive-accent: var(--color-accent-1);
 	--interactive-accent-hover: var(--color-accent-2);
 }
-.light-theme {
-	--highlight-mix-blend-mode: darken;
-	--mono-rgb-0: 255, 255, 255;
-	--mono-rgb-100: 0, 0, 0;
-	--color-red-rgb: 233, 49, 71;
-	--color-red: #e93147;
-	--color-orange-rgb: 236, 117, 0;
-	--color-orange: #ec7500;
-	--color-yellow-rgb: 224, 172, 0;
-	--color-yellow: #e0ac00;
-	--color-green-rgb: 8, 185, 78;
-	--color-green: #08b94e;
-	--color-cyan-rgb: 0, 191, 188;
-	--color-cyan: #00bfbc;
-	--color-blue-rgb: 8, 109, 221;
-	--color-blue: #086ddd;
-	--color-purple-rgb: 120, 82, 238;
-	--color-purple: #7852ee;
-	--color-pink-rgb: 213, 57, 132;
-	--color-pink: #d53984;
-	--color-base-00: #ffffff;
-	--color-base-05: #fcfcfc;
-	--color-base-10: #fafafa;
-	--color-base-20: #f6f6f6;
-	--color-base-25: #e3e3e3;
-	--color-base-30: #e0e0e0;
-	--color-base-35: #d4d4d4;
-	--color-base-40: #bdbdbd;
-	--color-base-50: #ababab;
-	--color-base-60: #707070;
-	--color-base-70: #5c5c5c;
-	--color-base-100: #222222;
-	--color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
-	--color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-	--color-accent-1: hsl(
-		calc(var(--accent-h) - 1),
-		calc(var(--accent-s) * 1.01),
-		calc(var(--accent-l) * 1.075)
-	);
-	--color-accent-2: hsl(
-		calc(var(--accent-h) - 3),
-		calc(var(--accent-s) * 1.02),
-		calc(var(--accent-l) * 1.15)
-	);
-	--background-secondary-alt: var(--color-base-05);
-	--background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
-	--background-modifier-cover: rgba(220, 220, 220, 0.4);
-	--input-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12),
-		0 2px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 1.5px 0 rgba(0, 0, 0, 0.03),
-		0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 0 0 0 transparent;
-	--input-shadow-hover: inset 0 0 0 1px rgba(0, 0, 0, 0.17),
-		0 2px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 1.5px 0 rgba(0, 0, 0, 0.03),
-		0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 0 0 0 transparent;
-	--shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.028),
-		0px 3.4px 6.7px rgba(0, 0, 0, 0.042), 0px 15px 30px rgba(0, 0, 0, 0.07);
-	--shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
-		0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2);
+
+/*************/
+/* Overrides */
+/*************/
+
+body {
+	--tab-curve: 0;
+	--tab-outline-width: 0;
+	--ribbon-background: var(--color-base-20);
 }
+
+.workspace-split.mod-root .workspace-tab-header::before,
+.workspace-split.mod-root .workspace-tab-header::after {
+	display: none;
+}
+
+.workspace .mod-root .workspace-tab-header {
+	padding: 0 3px;
+}
+
+/* hide border between tabs */
+.workspace .mod-root .workspace-tab-header-inner::after {
+	width: 0;
+}
+
+.workspace-ribbon {
+	border-right: transparent;
+	background: var(--ribbon-background);
+}
+
+body.is-focused .titlebar,
+body.is-focused .workspace-ribbon.mod-left {
+	--titlebar-background: var(--ribbon-background);
+}
+
+/* set background for the right/left sidebar */
+body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless
+	.mod-top:not(.mod-top-left-space):not(.mod-top-right-space)
+	.workspace-tab-header-container {
+	background: var(--color-base-05);
+}
+
+/* set background for the middle tab background */
+body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless
+	.mod-top
+	.workspace-tab-header-container,
+body.is-focused .sidebar-toggle-button {
+	background: var(--color-base-20);
+}
+
+/*************/
+/* Additions */
+/*************/
+
+body {
+	--transition: background-color 0.5s ease-in-out;
+}
+.sidebar-toggle-button,
+.workspace-tabs.mod-top,
+.workspace-tab-header:not(.is-active):hover
+	.workspace-tab-header-inner
+	.workspace-tab-header.is-active {
+	transition: var(--transition);
+}
+
+.workspace-tab-header:not(.is-active):hover {
+	.workspace-tab-header-inner {
+		background-color: transparent;
+	}
+}
+
+/* body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless */
+/* 	.mod-top */
+/* 	.workspace-tab-header-container, */
+/* .workspace-tabs .workspace-leaf { */
+/* } */
